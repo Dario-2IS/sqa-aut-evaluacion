@@ -23,7 +23,7 @@ Feature: HU-EVA-999 Escenarios API de personajes Marvel (microservicio para gest
 
   @id:2 @obtenerPersonajePorId @solicitudExitosa200
   Scenario: T-API-HU-EVA-999-CA02-Obtener personaje por ID exitosamente 200 - karate
-    * path '1'
+    * path '1248'
     When method GET
     Then status 200
     # And match response == karate.read('classpath:data/marvel_characters_api/response_character_ok.json')
@@ -66,7 +66,7 @@ Feature: HU-EVA-999 Escenarios API de personajes Marvel (microservicio para gest
 
   @id:7 @actualizarPersonaje @actualizacionExitosa200
   Scenario: T-API-HU-EVA-999-CA07-Actualizar personaje exitosamente 200 - karate
-    * path '1'
+    * path '514'
     * def jsonData = read('classpath:data/marvel_characters_api/request_create_character.json')
     * set jsonData.description = 'Updated description'
     And request jsonData
@@ -87,7 +87,7 @@ Feature: HU-EVA-999 Escenarios API de personajes Marvel (microservicio para gest
 
   @id:9 @eliminarPersonaje @eliminacionExitosa204
   Scenario: T-API-HU-EVA-999-CA09-Eliminar personaje exitosamente 204 - karate
-    * path '1'
+    * path '514'
     When method DELETE
     Then status 204
     # And match response == null
